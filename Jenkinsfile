@@ -35,10 +35,18 @@ pipeline{
         success{
             mail body: """Hi Team, The app is Successfully deployed
             ${BUILD_URL}
-            
+
 Thanks,
 DevOps Team.
 git212""", subject: "${JOB_NAME} - Successfully Deployed", to: 'bharatmahanta05@gmail.com'
         }
     }
+        unstable{
+            mail body: """Hi Team, The deploymeny faield
+            ${BUILD_URL}
+
+Thanks,
+DevOps Team.
+git212""", subject: "${JOB_NAME} - Deployment faield", to: 'bharatmahanta05@gmail.com'
+        }
 }
