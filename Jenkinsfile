@@ -6,7 +6,7 @@ pipeline{
     stages{
         stage('SCM Checkout'){
             steps{
-                git url: 'https://github.com/git212/2pmwebapps',
+                git url: 'https://github.com/git212/genwebapp',
                 branch: 'master'
                 credentialsId: 'github',
             }
