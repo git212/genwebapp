@@ -6,7 +6,7 @@ pipeline{
     stages{
         stage('SCM Checkout'){
             steps{
-                git branch: "${params['branchName']}"
+                git branch: "${params['branchName']}",
                     url: 'https://github.com/git212/genwebapp'
             }
         }
