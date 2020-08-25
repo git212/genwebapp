@@ -1,0 +1,8 @@
+---
+- hosts: all
+  tasks:
+    - name: task a
+      debug:
+        msg: This is task A
+    - name: include tasks from three
+      import_tasks: three.yml

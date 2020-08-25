@@ -1,0 +1,10 @@
+---
+- hosts: all
+  become: yes
+  vars:
+    app_version: v1
+  tasks:
+    - name: replace version in pod.yml
+      template:
+        src: pod.j2
+        dest: /tmp/pod.yml
